@@ -68,7 +68,7 @@
     </x-button>
 
     <a href="{{ route('dashboard') }}">
-        <x-application-logo aria-hidden="true" class="w-10 h-10" />
+        <x-application-logo aria-hidden="true" class="w-30 h-20" />
 
         <span class="sr-only">Dashboard</span>
     </a>

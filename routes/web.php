@@ -17,9 +17,7 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', 'dashboard');
 
 Route::get("/auth/{provider}/redirect", [SocialiteController::class, 'redirect']);
 Route::get("/auth/{provider}/callback", [SocialiteController::class, 'callback']);
