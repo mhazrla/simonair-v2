@@ -114,7 +114,7 @@ class DashboardController extends Controller
         $status = 0;
 
         if ($suhu >= 25 && $suhu <= 27) {
-            $amonia < 0.25 && $ph >= 6 or $ph <= 8 ?  $status = 1 : $status = 0;
+            $amonia < 1.25 && $ph >= 6 or $ph <= 8 && $tds <= 1000 ?  $status = 1 : $status = 0;
         }
 
         $data = [
