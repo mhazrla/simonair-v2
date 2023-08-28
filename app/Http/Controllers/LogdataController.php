@@ -9,7 +9,7 @@ class LogdataController extends Controller
 {
     public function show($id)
     {
-        $logs = Logdata::where('alat_id', $id)->paginate(10);
+        $logs = Logdata::where('alat_id', $id)->orderBy('created_at', 'desc')->paginate(50);
         if ($logs->isEmpty()) {
             abort(404);
         }
