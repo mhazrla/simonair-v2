@@ -2,9 +2,15 @@
     <div>
         {{-- Header --}}
         <div class=" my-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <h2 class="text-xl font-bold leading-tight text-blue-800 dark:text-white">
-                {{ __($data->nama_alat) }}
-            </h2>
+            <div>
+                <h2 class="text-xl font-bold leading-tight text-blue-800 dark:text-white">
+                    {{ __($data->nama_alat) }}
+                </h2>
+
+                <span class="text-xs text-gray-500">({{ $data->id }})</span>
+            </div>
+
+
 
             <div class=" flex flex-row gap-4 ">
 
@@ -23,6 +29,7 @@
 
 
         </div>
+
         {{-- Card --}}
 
         <div class=" w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -348,7 +355,6 @@
                     type: "GET",
                     url: "/dashboard/" + id,
                     success: function(res) {
-                        console.log(res.dashboard.nama_alat)
                         $("#nama-alat").val(res.dashboard.nama_alat);
                         $('#id-alat').val(id)
                     },
